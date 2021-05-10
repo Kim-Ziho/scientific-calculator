@@ -83,131 +83,31 @@ width="800px" height="400px" title="Class Diagram" alt="Class Diagram"></img><br
 
 
 ## 3. 입력/출력 데이터 정의 (Data Structure Design)
-* 데이터 종류: 피연산자(실수, double), 연산자(Character), Button 위젯 기능(0~9 정수, 소수점, 파이, 연산자(+,-,*,/,%,mod,log10,pow,factorial, Sqrt, Abs, Trigono), 진법변환, ConvertSD,  reset, delete), 수식(문자열, String)
-* 입력: Button 위젯(피연산자, 연산자, 진법변환, ConvertSD, reset, delete)
+* 데이터 종류: 피연산자(실수, double), 연산자(Character), Button 위젯 기능(0~9 정수, 소수점, 연산자(+,-,*,/,%,mod,log10,exp,pow,factorial,sin,cos,tan), reset, delete, clear), 수식(문자열, String)
+* 입력: Button 위젯(피연산자, 연산자, reset, delete, clear)
 * 출력: Textview 위젯(수식 계산한 결과값(문자열, String), 이전 계산 결과값(문자열, String)), ScrollView 위젯(history 기능으로 이전 계산 결과값이 쌓일 때 출력)
+<br/>
 
+## 4. 알고리즘 설계 및 구현 (Algorithm Design and Implementation)
+- Operation 클래스
+  - plus, minus, multiplication, division, mod, expFunction, commonLogFunction, involutionFunction, factorialFunction 알고리즘<br/>
+ 
+<img src="https://github.com/Kim-Ziho/KSA_Calculator/blob/main/image/opeartionFlowChart.png" width="500px" height="400px" title="OperationFlowChart" alt="OperationFlowChart"></img><br/>
 
+## 5. 테스트 이미지 (Test)
+* 애플리케이션 sin 연산 : sin30 * 100 + 50
 
-## 4. 테스트 이미지 (Test)
-* 애플리케이션 run
-:시작 화면
-이미지
+<img src="https://github.com/Kim-Ziho/KSA_Calculator/blob/main/image/sin30_100_50.PNG" width="400px" height="850px" title="calculateSin" alt="calculateSin"></img><br/>
 
-* 애플리케이션 숫자 입력
+* 애플리케이션 tan 연산 : 100 * tan45 / 50
 
-:1234567890
+<img src="https://github.com/Kim-Ziho/KSA_Calculator/blob/main/image/100_tan_45_50.PNG" width="400px" height="850px" title="calculateTan" alt="calculateTan"></img><br/>
 
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/start.png" width="400px" height="850px" title="start" alt="start"></img><br/>
+* 애플리케이션 Clear
 
-* 애플리케이션 덧셈 연산
+<img src="https://github.com/Kim-Ziho/KSA_Calculator/blob/main/image/clear.PNG" width="400px" height="850px" title="clear" alt="clear"></img><br/>
 
-:17+22
+* 애플리케이션 cos 연산 : cos60 * 4 ^ 2
 
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/plus.PNG" width="400px" height="850px" title="plus" alt="plus"></img><br/>
-
-* 애플리케이션 뺄셈 연산
-
-:39-40
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/minus.PNG" width="400px" height="850px" title="minus" alt="minus"></img><br/>
-
-* 애플리케이션 곱셈 연산
-
-:9*12
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/mult.PNG" width="400px" height="850px" title="mult" alt="mult"></img><br/>
-
-* 애플리케이션 나눗셈 연산
-
-:40/4
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/div.PNG" width="400px" height="850px" title="div" alt="div"></img><br/>
-
-* 애플리케이션 나머지 연산
-
-:13mod3
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/mod.PNG" width="400px" height="850px" title="mod" alt="mod"></img><br/>
-
-* 애플리케이션 상용로그 연산 (log)
-
-:log(100)
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/log10.PNG" width="400px" height="850px" title="log10" alt="log10"></img><br/>
-
-* 애플리케이션 거듭제곱 연산
-
-:3^4
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/pow.PNG" width="400px" height="850px" title="pow" alt="pow"></img><br/>
-
-* 애플리케이션 팩토리얼 연산
-
-:5!
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/Factorial.PNG" width="400px" height="850px" title="Factorial" alt="Factorial"></img><br/>
-
-* 애플리케이션 소수점 연산
-
-:1.1+3.4
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/dotplus.PNG" width="400px" height="850px" title="dotplus" alt="dotplus"></img><br/>
-
-* 애플리케이션 괄호 연산
-
-:5+2*(9-4)
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/operation.PNG" width="400px" height="850px" title="operation" alt="operation"></img><br/>
-
-* 애플리케이션 절대값 연산
-
-:Abs(-9)
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/abs.PNG" width="400px" height="850px" title="abs" alt="abs"></img><br/>
-
-* 애플리케이션 삼각함수 연산
-
-:Trigono(90)
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/trigono.PNG" width="400px" height="850px" title="trigono" alt="trigono"></img><br/>
-
-* 애플리케이션 제곱근 연산
-
-:Sqrt(16)
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/sqrt.PNG" width="400px" height="850px" title="sqrt" alt="sqrt"></img><br/>
-
-* 애플리케이션 소수<->분수 기능
-
-:4.12 <-> 103/25
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/fraction1.PNG" width="400px" height="850px" title="fraction1" alt="fraction1"></img><br/>
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/fraction2.PNG" width="400px" height="850px" title="fraction2" alt="fraction2"></img><br/>
-
-
-* 애플리케이션 진법변환 기능
-
-:Conv(18)
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/conv.PNG" width="400px" height="850px" title="conv" alt="conv"></img><br/>
-
-* 애플리케이션 Delete 기능
-
-:12345678
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/del.PNG" width="400px" height="850px" title="del" alt="del"></img><br/>
-
-* 애플리케이션 Reset 기능
-
-:CE
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/clear.PNG" width="400px" height="850px" title="clear" alt="clear"></img><br/>
-
-* 애플리케이션 History 기능
-
-:이전 연산 결과
-
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/history.PNG" width="400px" height="850px" title="history" alt="history"></img><br/>
-
+<img src="https://github.com/Kim-Ziho/KSA_Calculator/blob/main/image/cos60_4_2.PNG" width="400px" height="850px" title="calculatecos" alt="calculatecos"></img><br/>
 
