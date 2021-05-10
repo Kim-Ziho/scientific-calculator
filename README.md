@@ -29,4 +29,4 @@
 
 ##### [프로젝트 문서화][doclink]
 
-[doclink]: https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/document/SicCalc_Doc.md "go doc"
+[doclink]: https://github.com/Kim-Ziho/KSA_Calculator/blob/main/document/Calc.md "go doc"
